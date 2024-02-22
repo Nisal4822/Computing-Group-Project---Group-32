@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${pageTitle}">Event Management System</title>
+</head>
+<body>
+    <h1>Welcome to our Event Management System</h1>
+    <p>Check out our latest events and buy tickets!</p>
+
+    <!-- Example ticket listing -->
+    <div th:each="ticket : ${tickets}">
+        <h2 th:text="${ticket.name}"></h2>
+        <p th:text="${ticket.description}"></p>
+        <p>Price: $<span th:text="${ticket.price}"></span></p>
+        <a th:href="@{/buyTicket(ticketId=${ticket.id})}">Buy Ticket</a>
+        <hr>
+    </div>
+</body>
+</html>

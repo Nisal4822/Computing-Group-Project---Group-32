@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+
+    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css" />
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label, input, button {
+            display: block;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+
+    <form action="RegisterServlet" method="post">
+  
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required>
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="Lastname" name="Lastname" required>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="Mobilenumber" name="Mobilenumber" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="Useremail" name="Useremail" required>
+
+        <label for="paypalEmail">PayPal Email:</label>
+        <input type="email" id="Paypalemail" name="Paypalemail" required>
+
+        <label for="paypalPassword">PayPal Password:</label>
+        <input type="password" id="Paypalpswd" name="Paypalpswd" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="Userpswd" name="Userpswd" required>
+
+        <button type="submit">Submit</button>
+        <button type="button" onclick="ClearForm()">Clear</button>
+    </form>
+
+    <script>
+        function ClearForm() {
+            document.getElementById("firstname").value = "";
+            document.getElementById("Lastname").value = "";
+            document.getElementById("Mobilenumber").value = "";
+            document.getElementById("Useremail").value = "";
+            document.getElementById("Paypalemail").value = "";
+            document.getElementById("Paypalpswd").value = "";
+            document.getElementById("Userpswd").value = "";
+        }
+    </script>
+    
+    
+
+</body>
+</html>

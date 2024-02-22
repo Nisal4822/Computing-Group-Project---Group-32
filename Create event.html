@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css" />
+</head>
+<body>
+    <nav>
+        <div class="logo">Electra Music</div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+          <button class="search-btn"><i class="fas fa-search"></i><h3>Search</h3></button>
+        </div>
+        </div>
+      </nav>
+
+  <h5>Create an Event</h5>
+  <!-- https://www.istockphoto.com/portfolio/TarasKokhan?assettype=film -->
+  <form id="eventForm" style="background-color: #d5f4e6;">
+    <table style="background-color: #d5f4e6; display: flex; flex-direction: column; align-items: center;">
+        <tr>
+            <td><label for="eventName">Event Name:</label></td>
+            <td></td>
+        </tr><br>
+        <tr>
+            <td><input type="text" id="eventName" name="eventName" required></td>
+            <td></td>
+        </tr><br><br>
+    
+        <tr>
+            <td><label for="eventDescription">Event Description:</label></td>
+            <td></td>
+        </tr><br>
+        <tr>
+            <td><textarea id="eventDescription" name="eventDescription" rows="4" required></textarea></td>
+            <td></td>
+        </tr><br><br>
+    
+        <tr>
+            <td><label for="eventHosts">Event Hosts:</label></td>
+            <td></td>
+        </tr><br>
+        <tr>
+            <td><input type="text" id="eventHosts" name="eventHosts"></td>
+            <td></td>
+        </tr><br><br>
+    
+        <tr>
+            <td><label for="eventArtists">Event Artists:</label></td>
+            <td></td>
+        </tr><br>
+        <tr>
+            <td><input type="text" id="eventArtists" name="eventArtists"></td>
+            <td></td>
+        </tr><br><br>
+    
+        <tr>
+            <td><label for="numberOfSeats">Number of Seats:</label></td>
+            <td></td>
+        </tr><br>
+        <tr>
+            <td><input type="number" id="numberOfSeats" name="numberOfSeats" required></td>
+            <td></td>
+        </tr><br><br>
+    
+        <tr>
+            <td><label for="ticketPrice">Ticket Price: </label></td>
+            <td></td>
+        </tr><br>
+        <tr>
+            <td><label>Rs. <input type="number" id="ticketPrice" name="ticketPrice" required></label></td>
+            <td></td>
+        </tr><br><br>
+    
+        <tr>
+            <td><label for="eventImages">Event Images:</label></td>
+            <td></td>
+        </tr><br>
+        <tr>
+            <td><input type="file" id="eventImages" name="eventImages" multiple accept="image/*"></td>
+            <td></td>
+        </tr><br><br>
+    
+        <tr>
+            <td><button type="submit" style="background-color: #82b74b; margin: auto;">Submit</button></td>
+            <td><button type="button" onclick="clearForm()" style="background-color: #82b74b; margin: auto;">Clear</button></td>
+        </tr><br>
+    </table>
+
+  </form>
+
+  <script>
+    function clearForm() {
+      document.getElementById("eventForm").reset();
+    }
+  </script>
+</body>
+</html>

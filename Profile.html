@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html leng="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="Profile CSS.css">
+    <script src="https://kit.fontawesome.com/cacf32ff12.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/jpg" />
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const uploadBtn = document.getElementsByClass("uploadBtn");
+    const logoutBtn = document.getElementByClass("logoutBtn");
+
+    uploadBtn.addEventListener("click", function () {
+        
+        console.log("Upload button clicked");
+    });
+
+    logoutBtn.addEventListener("click", function () {
+        
+        console.log("Logout button clicked");
+    });
+});
+function uploadProfile() {
+    // Get form values
+    var firstName = document.getElementByClass('firstName').value;
+    var lastName = document.getElementByClass('lastName').value;
+    var email = document.getElementByClass('email').value;
+    var phonenumber = document.getElementByClass('phone number').value;
+}
+    </script>
+
+</head>
+<body>
+    <nav>
+        <div class="logo">All Event Page</div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+          <button class="search-btn"><i class="fas fa-search"></i> Search</button>
+    
+          <li>
+                        
+            <a href="index.html">
+                
+                All Event page
+            
+            </a>
+        
+        </li>
+    
+        <li>
+                        
+            <a href="Ongoing events.html">
+                
+                Ongoing Events
+            
+            </a>
+        
+        </li>
+    
+        <li>
+                        
+            <a href="Upcoming events.html">
+                
+                Upcoming Events
+            
+            </a>
+        
+        </li>
+    
+        </div>
+        <div class="auth-buttons">
+          <button class="login-btn">Login</button>
+          <button class="signup-btn">Sign Up</button>
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="leftbox">
+            <nav>
+                <a onclick="tabs(0)" class="tab active">
+                    <i class="fas fa-user"></i>
+                </a>
+                
+            </nav>
+        </div>
+        <div class="rightbox">
+            <div class="profile tabShow">
+                <h1>Personal Information</h1>
+
+                <h2> <lable for="first Name">First Name:</lable></h2>
+                <input type="text" class="first Name" name="first Name "required>
+
+                <h2><lable for ="last Name">Last Name:</lable></h2>
+                <input type="text" class="last Name" name="last name"requires>
+
+                <h2><lable for="phone Number">Phone Number:</lable></h2>
+                <input type="tel" class="phone Number" name="phone Number"required>
+
+                <h2><lable for ="email">Email:</lable></h2>
+                <input type="email" class="email"name ="email"required>
+                <br>
+
+
+                <table>
+                    <tr>
+                        <td>
+                            <button class="uploadBtn" class="bottom-left-btn">Update</button>
+                        </td>
+                        <td>
+                            <button class="logoutBtn"class="bottom-right-btn">Logout</button>
+                        </td>
+                    </tr>
+                </table>
+                
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    <footer>
+        <div class="contact-details">
+          <h2>Contact Details</h2>
+          <p>Email: example@example.com</p>
+          <p>Phone: +1234567890</p>
+          <p>Address: 123 Street, City, Country</p>
+        </div>
+      </footer>
+
+    <script src="Profile JS.js"></script>
+
+</body>
+</html>
